@@ -15,8 +15,6 @@
 
 <div id="nav-border" class="container boxed">
     <nav id="nav" class="nav justify-content-center">
-        {{ range .Site.Menus.main }}
-        <span> [ </span><a class="nav-link" href="{{ .URL }}">{{ .Name | safeHTML }}</a><span> ] </span>
-        {{ end }}
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
     </nav>
 </div>

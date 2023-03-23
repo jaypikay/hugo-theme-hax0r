@@ -1,0 +1,22 @@
+/*
+https://coolors.co/04080f-507dbc-a1c6ea-bbd1ea-dae3e5
+*/
+
+$background-color: {{ .Site.Params.style.backgroundColor | default "#04080f" }};
+$text-color: {{ .Site.Params.style.textColor | default "#dae3e5" }};
+$border-color: {{ .Site.Params.style.borderColor | default "#dae3e5" }};
+$anchor-color: {{ .Site.Params.style.anchorColor | default "#507dbc" }};
+$anchor-active-color: {{ .Site.Params.style.anchorActiveColor | default "#bbd1ea" }};
+$anchor-hover-color: {{ .Site.Params.style.anchorHoverColor | default "#bbd1ea" }};
+$pre-text-color: {{ .Site.Params.style.preTextColor | default "#f8f8f2" }};
+$pre-background-color: {{ .Site.Params.style.preBackgroundColor | default "#272822" }};
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'DOS';
+  src: url("./fonts/Perfect DOS VGA 437 Win.ttf");
+}
+
+@import "base";
+
+@import "components/tag_lists";

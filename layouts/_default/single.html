@@ -1,7 +1,35 @@
 {{ define "main" }}
 <div class="boxed">
-<h1>{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-<br><br>
-{{ .Content }}
+
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">{{ .Title }}</h1>
+      {{- if ne .Type "page" }}
+      <div class="post-meta">
+        <div>
+            <span>Publisched:</span>
+          {{ .PublishDate.Format "Jan 2, 2006" }}
+        </div>
+        <div>
+            <span>Approx. time:</span>
+          {{ .ReadingTime }} min read
+        </div>
+        {{- with .Params.tags }}
+        <div><span>Tags:</span>
+          {{- range . -}}
+            {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+              <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- end }}
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+      {{- end }}
+    </header>
+    <hr/>
+
+    <div>
+    {{ .Content }}
+    </div>
+  </article>
 {{ end }}

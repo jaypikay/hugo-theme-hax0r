@@ -1,1 +1,6 @@
-<p class="footer boxed">Copyright (c) {{ now.Format "2006"}} GoatFoo</p>
+<div id="nav-border" class="container">
+    <nav id="nav" class="nav justify-content-center">
+{{ partial "menu.html" (dict "menuID" "footer" "page" .) }}
+    </nav>
+</div>
+<p class="footer boxed">Copyright (c) {{ now.Format "2006"}} <a href="/about/" >GoatFoo</a></p>

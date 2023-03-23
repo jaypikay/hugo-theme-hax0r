@@ -1,15 +1,14 @@
-name = "tui"
-description = "hax0r"
+name = "hax0r"
+description = "hax0r lulz"
 homepage = "https://localhost"
 license = "MIT"
 licenselink = "https://localhost"
-# tags = ["blog", "retro", "dos", "terminal"]
-# features = [
-#   "minimalistic blog",
-# ]
-# min_version = 0.55
-# 
-# [author]
-#   name = "GoatFoo"
-#   homepage = "https://goatpr0n.farm"
-# 
+tags = ["blog", "minimalistic", "dark", "ascii"]
+features = [
+  "minimalistic blog",
+]
+min_version = 0.55
+
+[author]
+  name = "GoatFoo"
+  homepage = "https://goatpr0n.farm"

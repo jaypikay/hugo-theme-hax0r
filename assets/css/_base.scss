@@ -1,0 +1,92 @@
+html {
+  font-family: "Lucida Console", "monospace";
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+*, *:before, *:after {
+  font-family: inherit;
+  font-size: inherit;
+  box-sizing: inherit;
+}
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+article header {
+    font-size: smaller;
+}
+
+a {
+    color: $anchor-color;
+    text-decoration: none;
+}
+
+pre {
+    font-size: smaller;
+    margin: 2em;
+    padding: 0.4em;
+    border: 1px dashed $border-color;
+    overflow: auto;
+    color: #f8f8f2;
+    background-color: #272822;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    height: auto;
+}
+
+a.active {
+    color: $anchor-active-color;
+}
+
+a:hover {
+    color: $anchor-hover-color;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: square;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+.boxed {
+    border-bottom: 1px dashed $border-color;
+    width: 1024px;
+    margin: auto;
+    padding: 1em;
+}
+
+@media only screen and (max-width: 1024px) {
+    .goatpr0n-wide {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .goatpr0n-small {
+        display: none;
+    }
+}

@@ -1,6 +1,6 @@
 ---
 title: Link collection
-author: JPK
+author: GoatFOo
 date: {{ .Date }}
 categories:
 tags:
