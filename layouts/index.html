@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="boxed">
+    <p>
+    <ul>
+        {{ with .Site.GetPage "/blog" }}
+        {{ range .Pages.ByPublishDate.Reverse }}
+        <li>[ {{ .PublishDate | time.Format "2006-01-01" }} ] <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+    </p>
+</div>
+{{ end }}

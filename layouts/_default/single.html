@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="boxed">
+<h1>{{ .Title }}</h1>
+{{ partial "metadata.html" . }}
+<br><br>
+{{ .Content }}
+{{ end }}
