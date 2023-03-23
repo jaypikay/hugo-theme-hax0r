@@ -1,17 +1,17 @@
 html {
-  font-family: "Lucida Console", "monospace";
-  font-size: 14px;
-  box-sizing: border-box;
+    font-family: "Lucida Console", "monospace";
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0px;
+    margin: 0px;
 }
 
 *, *:before, *:after {
-  font-family: inherit;
-  font-size: inherit;
-  box-sizing: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    box-sizing: inherit;
 }
 
 body {
@@ -74,7 +74,7 @@ nav ul li {
 
 .boxed {
     border-bottom: 1px dashed $border-color;
-    width: 1024px;
+    max-width: 1024px;
     margin: auto;
     padding: 1em;
 }
@@ -83,10 +83,34 @@ nav ul li {
     .goatpr0n-wide {
         display: none;
     }
+    .goatpr0n-small {
+        display: block;
+    }
+    .goatpr0n-minimal {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
+    .goatpr0n-wide {
+        display: block;
+    }
     .goatpr0n-small {
         display: none;
+    }
+    .goatpr0n-minimal {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .goatpr0n-small {
+        display: none;
+    }
+    .goatpr0n-wide {
+        display: none;
+    }
+    .goatpr0n-minimal {
+        display: block;
     }
 }
