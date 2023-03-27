@@ -1,10 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-author: {{ .Author }}
+title: "{{ replace .Name "_" " " | title }}"
 date: {{ .Date }}
+description: (╯ ͠° ͟ʖ ͡°)╯┻━┻ "I forgot to write a description!"
 categories:
 tags:
-description: (╯ ͠° ͟ʖ ͡°)╯┻━┻ "I forgot to write a description!"
 draft: true
 ---
 
