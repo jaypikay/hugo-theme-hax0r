@@ -1,9 +1,9 @@
 {{ define "main" }}
 <div class="boxed">
     <p>
-    <ul>
+    <ul class="content-list">
         {{ range .Pages.ByPublishDate.Reverse }}
-        <li>[ {{ .PublishDate | time.Format "2006-01-01" }} ] <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        <li><span>[</span><span class="date">{{ .PublishDate | time.Format "2006-01-01" }}</span><span>]</span> <a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{ end }}
     </ul>
     </p>

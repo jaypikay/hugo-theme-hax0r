@@ -20,25 +20,8 @@ body {
 }
 
 article header {
-    font-size: smaller;
-}
-
-a {
-    color: $anchor-color;
-    text-decoration: none;
-}
-
-pre {
-    font-size: smaller;
-    margin: 2em;
-    padding: 0.4em;
-    border: 1px dashed $border-color;
-    overflow: auto;
-    color: #f8f8f2;
-    background-color: #272822;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+    font-size: small;
+    font-family: "DOS", "Lucida Console", "monospace";
 }
 
 img {
@@ -49,6 +32,11 @@ img {
     height: auto;
 }
 
+a {
+    color: $anchor-color;
+    text-decoration: none;
+}
+
 a.active {
     color: $anchor-active-color;
 }
@@ -56,6 +44,16 @@ a.active {
 a:hover {
     color: $anchor-hover-color;
     text-decoration: underline;
+}
+
+ul > li > span {
+    color: $text-color;
+}
+
+ul > li > span.date {
+    color: $text-color;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 ul {
@@ -77,40 +75,4 @@ nav ul li {
     max-width: 1024px;
     margin: auto;
     padding: 1em;
-}
-
-@media only screen and (max-width: 1024px) {
-    .goatpr0n-wide {
-        display: none;
-    }
-    .goatpr0n-small {
-        display: block;
-    }
-    .goatpr0n-minimal {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .goatpr0n-wide {
-        display: block;
-    }
-    .goatpr0n-small {
-        display: none;
-    }
-    .goatpr0n-minimal {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .goatpr0n-small {
-        display: none;
-    }
-    .goatpr0n-wide {
-        display: none;
-    }
-    .goatpr0n-minimal {
-        display: block;
-    }
 }

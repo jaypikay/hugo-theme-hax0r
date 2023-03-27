@@ -19,4 +19,6 @@ $pre-background-color: {{ .Site.Params.style.preBackgroundColor | default "#2728
 
 @import "base";
 
+@import "components/code";
+@import "components/goatpr0n";
 @import "components/tag_lists";

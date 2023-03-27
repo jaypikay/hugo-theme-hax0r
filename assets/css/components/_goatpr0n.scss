@@ -1,0 +1,35 @@
+@media only screen and (max-width: 1024px) {
+    .goatpr0n-wide {
+        display: none;
+    }
+    .goatpr0n-small {
+        display: block;
+    }
+    .goatpr0n-minimal {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .goatpr0n-wide {
+        display: block;
+    }
+    .goatpr0n-small {
+        display: none;
+    }
+    .goatpr0n-minimal {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .goatpr0n-small {
+        display: none;
+    }
+    .goatpr0n-wide {
+        display: none;
+    }
+    .goatpr0n-minimal {
+        display: block;
+    }
+}
