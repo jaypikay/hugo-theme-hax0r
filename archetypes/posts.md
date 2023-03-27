@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-author: GoatFoo
+author: {{ .Author }}
 date: {{ .Date }}
 categories:
 tags:
