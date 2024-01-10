@@ -1,78 +1,80 @@
 html {
-    font-family: "Lucida Console", "monospace";
-    font-size: 14px;
-    box-sizing: border-box;
+  font-family: "Lucida Console", "monospace";
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
-*, *:before, *:after {
-    font-family: inherit;
-    font-size: inherit;
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  font-family: inherit;
+  font-size: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    background-color: $background-color;
-    color: $text-color;
+  background-color: $background-color;
+  color: $text-color;
 }
 
 article header {
-    font-size: small;
-    font-family: "DOS", "Lucida Console", "monospace";
+  font-size: small;
+  font-family: "DOS", "Lucida Console", "monospace";
 }
 
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80%;
-    height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  height: auto;
 }
 
 a {
-    color: $anchor-color;
-    text-decoration: none;
+  color: $anchor-color;
+  text-decoration: none;
 }
 
 a.active {
-    color: $anchor-active-color;
+  color: $anchor-active-color;
 }
 
 a:hover {
-    color: $anchor-hover-color;
-    text-decoration: underline;
+  color: $anchor-hover-color;
+  text-decoration: underline;
 }
 
 ul > li > span {
-    color: $text-color;
+  color: $text-color;
 }
 
 ul > li > span.date {
-    color: $text-color;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+  color: $text-color;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 ul {
-    list-style: square;
+  list-style: square;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
+  display: inline;
 }
 
 .boxed {
-    border-bottom: 1px dashed $border-color;
-    max-width: 1024px;
-    margin: auto;
-    padding: 1em;
+  border-bottom: 1px dashed $border-color;
+  max-width: 1024px;
+  margin: auto;
+  padding: 1em;
 }
