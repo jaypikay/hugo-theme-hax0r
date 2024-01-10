@@ -1,12 +1,20 @@
 pre {
-    font-family: "DOS", "Lucida Console", "monospace";
-    margin: 2em;
-    padding: 0.4em;
-    border: 1px dashed $border-color;
-    overflow: auto;
-    color: #f8f8f2;
-    background-color: #272822;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+  font-family: "DOS", "Lucida Console", "monospace";
+  margin: 2em;
+  padding: 0.4em;
+  border: 1px dashed $border-color;
+  overflow: auto;
+  color: $code-color;
+  background-color: #272822;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+
+p > code {
+  font-family: "DOS", "Lucida Console", "monospace";
+  color: $code-color;
+  border-left: 1px dotted $border-color;
+  border-bottom: 1px dotted $border-color;
+  padding: 2px;
 }

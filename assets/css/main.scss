@@ -4,6 +4,7 @@ https://coolors.co/04080f-507dbc-a1c6ea-bbd1ea-dae3e5
 
 $background-color: {{ .Site.Params.style.backgroundColor | default "#04080f" }};
 $text-color: {{ .Site.Params.style.textColor | default "#dae3e5" }};
+$code-color: {{ .Site.Params.style.codeColor | default "#dae3e2" }};
 $border-color: {{ .Site.Params.style.borderColor | default "#dae3e5" }};
 $anchor-color: {{ .Site.Params.style.anchorColor | default "#507dbc" }};
 $anchor-active-color: {{ .Site.Params.style.anchorActiveColor | default "#bbd1ea" }};
