@@ -72,6 +72,34 @@ nav ul li {
   display: inline;
 }
 
+table {
+  font-family: DOS;
+  border-style: dashed;
+  border-width: 1px;
+  border-collapse: collapse;
+  border-color: $table-border-color;
+  background-color: $table-background-color;
+  margin: 2em;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 4px;
+}
+
+thead {
+  background-color: $table-header-background-color;
+}
+
+tbody tr:nth-child(even) {
+  background-color: $table-row-even-background-color;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: $table-row-odd-background-color;
+}
+
 .boxed {
   border-bottom: 1px dashed $border-color;
   max-width: 1024px;
