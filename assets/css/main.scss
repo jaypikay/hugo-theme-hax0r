@@ -16,6 +16,8 @@ $table-border-color: {{ .Site.Params.style.tableBackgroundColor | default "#dae3
 $table-header-background-color: {{ .Site.Params.style.tableHeaderBackgroudColor | default "#000000" }};
 $table-row-even-background-color: {{ .Site.Params.style.tableRowEvenBackgroundColor | default "#282227" }};
 $table-row-odd-background-color: {{ .Site.Params.style.tableRowOddBackgroundColor | default "#272822" }};
+$warning-background-color: {{ .Site.Params.style.warningBackgroundColor | default "#ff6030" }};
+$warning-color: {{ .Site.Params.style.warningColor | default "#04080f" }};
 
 @charset "UTF-8";
 @font-face {

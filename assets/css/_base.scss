@@ -58,6 +58,11 @@ ul > li > span.date {
   padding-right: 0.5em;
 }
 
+ul.content-list li:hover .date {
+  background-color: $anchor-hover-color;
+  color: $background-color;
+}
+
 ul {
   list-style: square;
 }
@@ -105,4 +110,8 @@ tbody tr:nth-child(odd) {
   max-width: 1024px;
   margin: auto;
   padding: 1em;
+}
+
+.warning {
+  background-color: $warning-background-color;
 }
