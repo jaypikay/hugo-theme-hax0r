@@ -54,13 +54,24 @@ ul > li > span {
 
 ul > li > span.date {
   color: $text-color;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-top: 6px;
+}
+
+ul > li > span.date:before {
+  content: " ";
+}
+ul > li > span.date:after {
+  content: " ";
+}
+ul > li:hover > span.date:before {
+  content: ">";
+}
+ul > li:hover > span.date:after {
+  content: "<";
 }
 
 ul.content-list li:hover .date {
-  background-color: $anchor-hover-color;
-  color: $background-color;
+  color: $anchor-hover-color;
 }
 
 ul {
