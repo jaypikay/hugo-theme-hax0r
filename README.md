@@ -6,7 +6,7 @@ A minimalistic dark theme for your [Hugo](https://gohugo.io) site.
 
 ```bash
 cd <your_hugo_site>
-git submodule add https://git.goatpr0n.de/blog/hugo-theme-hax0r.git themes/hax0r
+git submodule add https://github.com/jaypikay/hugo-theme-hax0r.git themes/hax0r
 ```
 
 ## Usage
