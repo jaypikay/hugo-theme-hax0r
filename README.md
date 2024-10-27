@@ -14,6 +14,7 @@ git submodule add https://github.com/jaypikay/hugo-theme-hax0r.git themes/hax0r
 The theme supports the configuration of colors through editing `config.{toml,yaml}`.
 
 **TOML**
+
 ```toml
 [params.style]
 backgroundColor = '#04080f'
@@ -31,23 +32,23 @@ preBackgroundColor = '#272822'
 ```yaml
 params:
   style:
-    backgroundColor: '#04080f'
-    textColor: '#dae3e5'
-    borderColor: '#dae3e5'
-    anchorColor: '#507dbc'
-    anchorActiveColor: '#bbd1ea'
-    anchorHoverColor: '#bbd1ea'
-    preTextColor: '#f8f8f2'
-    preBackgroundColor: '#272822'
+    backgroundColor: "#04080f"
+    textColor: "#dae3e5"
+    borderColor: "#dae3e5"
+    anchorColor: "#507dbc"
+    anchorActiveColor: "#bbd1ea"
+    anchorHoverColor: "#bbd1ea"
+    preTextColor: "#f8f8f2"
+    preBackgroundColor: "#272822"
 ```
 
 ## Configuration example
 
 ```yaml
-baseURL: 'https://goatpr0n.farm/'
-languageCode: 'en-us'
-title: 'A farm without animals'
-theme: 'hax0r'
+baseURL: "https://goatpr0n.farm/"
+languageCode: "en-us"
+title: "A farm without animals"
+theme: "hax0r"
 
 menu:
   main:
@@ -66,7 +67,7 @@ menu:
 
 params:
   style:
-    backgroundColor: '#04080f'
+    backgroundColor: "#04080f"
 
 permalinks:
   blog: /:year/:month/:slug/

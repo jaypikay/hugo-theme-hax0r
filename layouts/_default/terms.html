@@ -1,12 +1,14 @@
 {{ define "main" }}
-  <article class="boxed">
-    <ul class="tag-lists">
-      {{ range .Data.Terms.ByCount }}
-        <li class="tag-lists-item" data-weight="{{ .Count }}">
-            <span>[ </span><a class="tag-lists-item-title" href="{{ .Page.Permalink }}">
-                {{ .Page.Title }} ({{.Count}})</a><span> ]</span>
-        </li>
-      {{ end }}
-    </ul>
-  </article>
+<article class="boxed">
+  <ul class="tag-lists">
+    {{ range .Data.Terms.ByCount }}
+    <li class="tag-lists-item" data-weight="{{ .Count }}">
+      <span>[ </span
+      ><a class="tag-lists-item-title" href="{{ .Page.Permalink }}">
+        {{ .Page.Title }} ({{.Count}})</a
+      ><span> ]</span>
+    </li>
+    {{ end }}
+  </ul>
+</article>
 {{ end }}
