@@ -28,5 +28,6 @@ $warning-color: {{ .Site.Params.style.warningColor | default "#04080f" }};
 @import "base";
 
 @import "components/code";
+@import "components/avatar";
 @import "components/goatpr0n";
 @import "components/tag_lists";

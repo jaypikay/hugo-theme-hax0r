@@ -57,20 +57,30 @@ ul > li > span.date {
   padding-top: 6px;
 }
 
-ul > li > span.date:before {
+.center {
+  text-align: center;
+}
+
+span.fixed-width7-8 {
+  display: inline-block;
+  min-width: 7.5em;
+  content: "................";
+}
+
+ul > li > span.cursor:before {
   content: " ";
 }
-ul > li > span.date:after {
+ul > li > span.cursor:after {
   content: " ";
 }
-ul > li:hover > span.date:before {
+ul > li:hover > span.cursor:before {
   content: ">";
 }
-ul > li:hover > span.date:after {
+ul > li:hover > span.cursor:after {
   content: "<";
 }
 
-ul.content-list li:hover .date {
+ul.content-list li:hover .cursor {
   color: $anchor-hover-color;
 }
 
