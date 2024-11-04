@@ -66,6 +66,14 @@ menu:
       weight: 90
 
 params:
+  author:
+    name: "Your Name" # optional
+    avatar: "/image/avatar.png" # optional
+    contacts:
+      - service: "matrix"
+        address: "@yourname:matrix.org"
+      - service: "email"
+        address: "your.name@example.com"
   style:
     backgroundColor: "#04080f"
 
