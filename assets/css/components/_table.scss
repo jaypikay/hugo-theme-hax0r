@@ -1,0 +1,27 @@
+table {
+  font-family: "DOS", "Lucida Console", "monospace";
+  border-style: dashed;
+  border-width: 1px;
+  border-collapse: collapse;
+  border-color: $table-border-color;
+  background-color: $table-background-color;
+  margin: 2em;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 4px;
+}
+
+thead {
+  background-color: $table-header-background-color;
+}
+
+tbody tr:nth-child(even) {
+  background-color: $table-row-even-background-color;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: $table-row-odd-background-color;
+}

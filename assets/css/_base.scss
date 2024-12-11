@@ -48,15 +48,6 @@ a:hover {
   text-decoration: underline;
 }
 
-ul > li > span {
-  color: $text-color;
-}
-
-ul > li > span.date {
-  color: $text-color;
-  padding-top: 6px;
-}
-
 .center {
   text-align: center;
 }
@@ -64,27 +55,6 @@ ul > li > span.date {
 span.fixed-width7-8 {
   display: inline-block;
   min-width: 7.5em;
-}
-
-ul > li > span.cursor:before {
-  content: " ";
-}
-ul > li > span.cursor:after {
-  content: " ";
-}
-ul > li:hover > span.cursor:before {
-  content: ">";
-}
-ul > li:hover > span.cursor:after {
-  content: "<";
-}
-
-ul.content-list li:hover .cursor {
-  color: $anchor-hover-color;
-}
-
-ul {
-  list-style: square;
 }
 
 nav ul {
@@ -95,34 +65,6 @@ nav ul {
 
 nav ul li {
   display: inline;
-}
-
-table {
-  font-family: "DOS", "Lucida Console", "monospace";
-  border-style: dashed;
-  border-width: 1px;
-  border-collapse: collapse;
-  border-color: $table-border-color;
-  background-color: $table-background-color;
-  margin: 2em;
-  text-align: left;
-}
-
-th,
-td {
-  padding: 4px;
-}
-
-thead {
-  background-color: $table-header-background-color;
-}
-
-tbody tr:nth-child(even) {
-  background-color: $table-row-even-background-color;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: $table-row-odd-background-color;
 }
 
 .boxed {

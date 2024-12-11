@@ -1,0 +1,29 @@
+ul > li > span {
+  color: $text-color;
+}
+
+ul > li > span.date {
+  color: $text-color;
+  padding-top: 4px;
+}
+
+ul > li > span.cursor:before {
+  content: " ";
+}
+ul > li > span.cursor:after {
+  content: " ";
+}
+ul > li:hover > span.cursor:before {
+  content: ">";
+}
+ul > li:hover > span.cursor:after {
+  content: "<";
+}
+
+ul.content-list li:hover .cursor {
+  color: $anchor-hover-color;
+}
+
+ul {
+  list-style: square;
+}
