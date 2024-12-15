@@ -33,3 +33,4 @@ $warning-color: {{ .Site.Params.style.warningColor | default "#04080f" }};
 @import "components/avatar";
 @import "components/goatpr0n";
 @import "components/tag_lists";
+@import "components/toc";

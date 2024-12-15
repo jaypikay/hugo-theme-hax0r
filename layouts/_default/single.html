@@ -2,34 +2,34 @@
 <div class="boxed">
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">{{ .Title }}</h1>
+      <h1 class="post-title">{{ .Title }}</h1>
       {{- if ne .Type "page" }}
       <div class="post-meta compact">
         <div>
-            <span>Published:</span>
+          <span>Published:</span>
           {{ .PublishDate.Format "Jan 2, 2006" }}
         </div>
         <div>
-            <span>Approx. time:</span>
+          <span>Approx. time:</span>
           {{ .ReadingTime }} min read
         </div>
         {{- with .Params.tags }}
-        <div><span>Tags:</span>
-          {{- range . -}}
-            {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
-              <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
-            {{- end }}
-          {{- end }}
+        <div>
+          <span>Tags:</span>
+          {{- range . -}} {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+          <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
+          {{- end }} {{- end }}
         </div>
         {{- end }}
       </div>
       {{- end }}
     </header>
-    <hr/>
+    <hr />
+    {{- if gt (len .TableOfContents) 32 }}
+    <aside>{{ .TableOfContents }}</aside>
+    {{- end }}
 
-    <div>
-    {{ .Content }}
-    </div>
+    <div>{{ .Content }}</div>
   </article>
 </div>
 {{ end }}
