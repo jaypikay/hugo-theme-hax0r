@@ -56,11 +56,11 @@ body {
 body {
   background-color: $background-color;
   color: $text-color;
-  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
 }
 
 body.flicker {
   animation: flicker 0.15s infinite;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
 }
 
 @keyframes flicker {
@@ -80,6 +80,9 @@ body.flicker {
   font-family: inherit;
   font-size: 12px;
   cursor: pointer;
+}
+
+body.flicker #flicker-toggle {
   text-shadow: 0 0 3px #00ff00;
 }
 
@@ -93,6 +96,9 @@ article header {
   font-size: small;
   font-family: "DOS", "Lucida Console", "monospace";
   color: #00ff00;
+}
+
+body.flicker article header {
   text-shadow: 0 0 8px #00ff00;
 }
 
@@ -107,7 +113,6 @@ img {
 a {
   color: $anchor-color;
   text-decoration: none;
-  text-shadow: 0 0 3px $anchor-color;
 }
 
 a.active {
@@ -117,6 +122,13 @@ a.active {
 a:hover {
   color: $anchor-hover-color;
   text-decoration: underline;
+}
+
+body.flicker a {
+  text-shadow: 0 0 3px $anchor-color;
+}
+
+body.flicker a:hover {
   text-shadow: 0 0 8px $anchor-hover-color, 0 0 15px $anchor-hover-color;
 }
 
@@ -150,8 +162,11 @@ span.fixed-width7-8 {
 
 .warning {
   background-color: $warning-background-color;
-  text-shadow: 0 0 8px #ff6030;
   animation: warn-pulse 1.5s ease-in-out infinite;
+}
+
+body.flicker .warning {
+  text-shadow: 0 0 8px #ff6030;
 }
 
 @keyframes warn-pulse {
