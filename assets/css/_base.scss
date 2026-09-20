@@ -28,7 +28,7 @@ body::after {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  color: #00ff00;
+  color: $anchor-color;
   font-size: 24px;
   animation: blink 1s step-end infinite;
   z-index: 9999;
