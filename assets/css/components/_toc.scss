@@ -1,8 +1,8 @@
 #TableOfContents {
   width: 400px;
   background-color: #000000;
-  border: 2px solid #00ff00;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  border: 2px solid $anchor-color;
+  box-shadow: 0 0 10px rgba($anchor-color, 0.5);
   padding: 10px;
 }
 
