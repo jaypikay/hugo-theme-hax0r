@@ -1,14 +1,5 @@
 {{ define "main" }}
-<div class="boxed">
-  <p>
-  <ul class="content-list">
-    {{ range .Site.RegularPages }}
-    <li>
-      <span>[</span><span class="date fixed-width7-8 center cursor">{{ .PublishDate.Format "2006-01-02" }}</span><span>]</span>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </ul>
-  </p>
-</div>
+{{ with .Site.GetPage "/blog" }}
+{{ partial "post-list.html" . }}
+{{ end }}
 {{ end }}
