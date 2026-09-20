@@ -2,10 +2,11 @@ pre {
   font-family: "DOS", "Lucida Console", "monospace";
   margin: 2em;
   padding: 0.4em;
-  border: 1px dashed $border-color;
+  border: 2px dashed #00ff00;
   overflow: auto;
   color: $code-color;
-  background-color: #272822;
+  background-color: #0a0a0a;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -14,7 +15,9 @@ pre {
 p > code {
   font-family: "DOS", "Lucida Console", "monospace";
   color: $code-color;
-  border-left: 1px dotted $border-color;
-  border-bottom: 1px dotted $border-color;
+  border-left: 2px solid #00ff00;
+  border-bottom: 2px solid #00ff00;
   padding: 2px;
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
 }

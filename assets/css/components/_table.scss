@@ -1,12 +1,13 @@
 table {
   font-family: "DOS", "Lucida Console", "monospace";
   border-style: dashed;
-  border-width: 1px;
+  border-width: 2px;
+  border-color: #00ff00;
   border-collapse: collapse;
-  border-color: $table-border-color;
-  background-color: $table-background-color;
+  background-color: #000000;
   margin: 2em;
   text-align: left;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
 }
 
 th,
@@ -19,9 +20,9 @@ thead {
 }
 
 tbody tr:nth-child(even) {
-  background-color: $table-row-even-background-color;
+  background-color: #0f1a0f;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: $table-row-odd-background-color;
+  background-color: #1a2a1a;
 }
