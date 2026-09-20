@@ -60,7 +60,7 @@ body {
 
 body.flicker {
   animation: flicker 0.15s infinite;
-  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+  text-shadow: 0 0 5px $anchor-color, 0 0 10px $anchor-color;
 }
 
 @keyframes flicker {
@@ -74,8 +74,8 @@ body.flicker {
   left: 10px;
   z-index: 9999;
   background: $background-color;
-  color: #00ff00;
-  border: 1px solid #00ff00;
+  color: $anchor-color;
+  border: 1px solid $anchor-color;
   padding: 4px 8px;
   font-family: inherit;
   font-size: 12px;
@@ -83,11 +83,11 @@ body.flicker {
 }
 
 body.flicker #flicker-toggle {
-  text-shadow: 0 0 3px #00ff00;
+  text-shadow: 0 0 3px $anchor-color;
 }
 
 #flicker-toggle:hover {
-  background: #00ff00;
+  background: $anchor-color;
   color: $background-color;
   text-shadow: none;
 }
@@ -95,11 +95,11 @@ body.flicker #flicker-toggle {
 article header {
   font-size: small;
   font-family: "DOS", "Lucida Console", "monospace";
-  color: #00ff00;
+  color: $anchor-color;
 }
 
 body.flicker article header {
-  text-shadow: 0 0 8px #00ff00;
+  text-shadow: 0 0 8px $anchor-color;
 }
 
 img {
