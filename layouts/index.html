@@ -1,3 +1,5 @@
+{{ define "main" }}
 {{ with .Site.GetPage "/blog" }}
-{{ .Render "list" }}
+{{ partial "post-list.html" . }}
+{{ end }}
 {{ end }}

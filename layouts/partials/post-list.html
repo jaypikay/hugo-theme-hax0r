@@ -1,0 +1,15 @@
+<div class="boxed">
+    <p>
+    <ul class="content-list">
+        {{ range .Pages.ByPublishDate.Reverse }}
+        <li>
+            <span>[</span><span class="date fixed-width7-8 center cursor">{{ .PublishDate | time.Format "2006-01-02" }}</span><span>]</span>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- if .Draft }}
+            <i>(DRAFT)</i>
+            {{ end -}}
+        </li>
+        {{ end }}
+    </ul>
+    </p>
+</div>
