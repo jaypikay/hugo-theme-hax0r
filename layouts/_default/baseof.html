@@ -8,5 +8,25 @@
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
+        <button id="flicker-toggle" type="button" aria-pressed="false">flicker: off</button>
+        <script>
+        (function () {
+            var key = "hax0r-flicker";
+            var btn = document.getElementById("flicker-toggle");
+            function apply(on) {
+                document.body.classList.toggle("flicker", on);
+                btn.setAttribute("aria-pressed", on ? "true" : "false");
+                btn.textContent = "flicker: " + (on ? "on" : "off");
+            }
+            var on = false;
+            try { on = window.localStorage.getItem(key) === "on"; } catch (e) {}
+            apply(on);
+            btn.addEventListener("click", function () {
+                on = !document.body.classList.contains("flicker");
+                apply(on);
+                try { window.localStorage.setItem(key, on ? "on" : "off"); } catch (e) {}
+            });
+        })();
+        </script>
     </body>
 </html>

@@ -57,12 +57,36 @@ body {
   background-color: $background-color;
   color: $text-color;
   text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+body.flicker {
   animation: flicker 0.15s infinite;
 }
 
 @keyframes flicker {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.95; }
+}
+
+#flicker-toggle {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9999;
+  background: $background-color;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 4px 8px;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  text-shadow: 0 0 3px #00ff00;
+}
+
+#flicker-toggle:hover {
+  background: #00ff00;
+  color: $background-color;
+  text-shadow: none;
 }
 
 article header {
