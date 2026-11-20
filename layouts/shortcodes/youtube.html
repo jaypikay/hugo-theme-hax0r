@@ -1,0 +1,17 @@
+{{- $id := "" -}}
+{{- $title := "YouTube video" -}}
+{{- if .IsNamedParams -}}
+  {{- $id = .Get "id" -}}
+  {{- $title = .Get "title" | default $title -}}
+{{- else if .Params -}}
+  {{- $id = .Get 0 -}}
+{{- end -}}
+{{- if not (findRE `^[A-Za-z0-9_-]{11}$` ($id | default "" | string)) -}}
+  {{- errorf "The youtube shortcode requires an 11-character video ID at %s" .Position -}}
+{{- else -}}
+<div class="youtube-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ $id }}"
+    title="{{ $title }}" loading="lazy" allow="encrypted-media; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+{{- end -}}
