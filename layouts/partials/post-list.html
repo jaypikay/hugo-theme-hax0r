@@ -1,15 +1,34 @@
 <div class="boxed">
-    <p>
     <ul class="content-list">
         {{ range .Pages.ByPublishDate.Reverse }}
+        {{- $tags := .Params.tags | default slice }}
+        {{- $labels := slice }}
+        {{- if and (in $tags "youtube") (in $tags "music") (in $tags "video") }}
+            {{- $labels = $labels | append "[Music Video]" }}
+        {{- end }}
+        {{- $reverseEngineering := in $tags "reverseengineering" }}
+        {{- range .Params.categories }}
+            {{- if eq (replaceRE `[\s-]+` "" (lower .)) "reverseengineering" }}
+                {{- $reverseEngineering = true }}
+            {{- end }}
+        {{- end }}
+        {{- if $reverseEngineering }}
+            {{- $labels = $labels | append "[Reverse Engineering]" }}
+        {{- end }}
         <li>
-            <span>[</span><span class="date fixed-width7-8 center cursor">{{ .PublishDate | time.Format "2006-01-02" }}</span><span>]</span>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-            {{- if .Draft }}
-            <i>(DRAFT)</i>
-            {{ end -}}
+            <div class="post-list-row">
+                <span class="post-list-date">[<span class="date fixed-width7-8 center cursor">{{ .PublishDate | time.Format "2006-01-02" }}</span>]</span>
+                <span class="post-list-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{- if .Draft }}
+                    <i>(DRAFT)</i>
+                    {{ end -}}
+                </span>
+                {{- with $labels }}
+                <span class="post-list-labels">{{ range . }}<span class="cursor">{{ . }}</span> {{ end }}</span>
+                {{- end }}
+            </div>
         </li>
         {{ end }}
     </ul>
-    </p>
 </div>

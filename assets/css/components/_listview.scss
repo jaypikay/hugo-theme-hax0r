@@ -27,3 +27,36 @@ ul.content-list li:hover .cursor {
 ul {
   list-style: square;
 }
+
+.post-list-row {
+
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) auto;
+  column-gap: 0.5em;
+}
+
+.post-list-title {
+  overflow-wrap: anywhere;
+}
+
+.post-list-labels {
+  text-align: right;
+}
+
+.content-list li:hover .post-list-date .cursor::before {
+  content: ">";
+}
+
+.content-list li:hover .post-list-date .cursor::after {
+  content: "<";
+}
+
+@media (max-width: 40em) {
+  .post-list-row {
+    grid-template-columns: max-content minmax(0, 1fr);
+  }
+
+  .post-list-labels {
+    grid-column: 2;
+  }
+}
