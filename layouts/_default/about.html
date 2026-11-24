@@ -1,18 +1,19 @@
 {{ define "main" }}
 <div class="boxed">
-  <p>
-    {{- if .Site.Params.author.name }}
-    <h1>{{ .Site.Params.author.name }}</h1>
-    {{- end }}
-    {{- if .Site.Params.author.avatar }}
-    <img class="avatar" src="{{ .Site.Params.author.avatar }}"\>
-    {{- end }}
-    <ul class="content-list">
-      {{- range .Site.Params.author.contacts }}
-      <li><span>[</span><span class="fixed-width7-8 center cursor">{{ .service }}</span><span>]
-      </span><span>{{.address}}</span></li>
-      {{- end }}
-    </ul>
-  </p>
+  {{- with .Site.Params.author.name }}
+  <h1 class="about-title">{{ . }}</h1>
+  {{- end }}
+  {{- with .Site.Params.author.avatar }}
+  <figure class="about-avatar">
+    <img class="avatar" src="{{ . }}" alt="Game Boy-style pixel-art portrait of GoatFoo with contact details">
+    <figcaption class="visually-hidden">
+      <ul class="content-list">
+        {{- range $.Site.Params.author.contacts }}
+        <li>{{ .service }}: {{ .address }}</li>
+        {{- end }}
+      </ul>
+    </figcaption>
+  </figure>
+  {{- end }}
 </div>
 {{ end }}
